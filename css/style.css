@@ -1,39 +1,157 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
-  color: #2f2118;
-  background: #f6f0e8;
-  font-family: Arial, sans-serif;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #4a2e3a;
+  background: linear-gradient(180deg, #fffaf6, #fff5f8 60%, #f5f9ec);
+  background-attachment: fixed;
 }
 
-.page {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 32px 20px;
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem 1.25rem;
 }
+
+.brand {
+  font-weight: 800;
+  color: #e84a7f;
+}
+
+nav { display: flex; gap: 1.2rem; font-weight: 600; color: #8a6b78; }
+
+nav a {
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover { color: #e84a7f; }
+
+/* Challenge: link aktif */
+nav a.aktif {
+  color: #e84a7f;
+  border-bottom-color: #ff6f9c;
+}
+
+/* ===== Layout ===== */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1.25rem 4rem;
+}
+
+section { margin-bottom: 3rem; }
+
+h2 { color: #8fc244; }
+h2::before { content: "🍓 "; }
 
 .hero {
-  padding: 36px;
-  color: white;
-  background: #6f3b1f;
+  padding: 2.5rem 2rem;
+  margin: 1rem 0 3rem;
+  color: #fff;
   border-radius: 24px;
+  background: linear-gradient(135deg, #ff8fb1, #ff6f9c 50%, #b0d86f);
+  box-shadow: 0 18px 40px rgba(232, 74, 127, 0.25);
 }
 
-.eyebrow {
-  margin: 0 0 8px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.2;
 }
 
-.products {
-  padding-left: 1.2rem;
-}
+.hero p { margin: 0 0 1.25rem; }
 
 button {
-  padding: 12px 18px;
-  color: #2f2118;
-  font-weight: 700;
-  cursor: pointer;
-  background: #ffd166;
+  padding: 0.75rem 1.3rem;
+  font: inherit;
+  font-weight: 800;
+  color: #e84a7f;
+  background: #fff;
   border: 0;
   border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+article {
+  padding: 1rem;
+  background: #fff;
+  border: 1.5px solid #ffe4ec;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(232, 74, 127, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(232, 74, 127, 0.18);
+}
+
+article img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+}
+
+article h3 { margin: 0 0 0.2rem; font-size: 1rem; }
+article p { margin: 0; font-weight: 800; color: #e84a7f; }
+
+.kontak {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1.5px dashed #ff6f9c;
+  border-radius: 16px;
+  scroll-margin-top: 90px;
+}
+
+.kontak ul { list-style: none; padding: 0; margin: 0; }
+.kontak li { margin-bottom: 0.4rem; }
+.kontak a {
+  color: #e84a7f;
+  font-weight: 700;
+  border-bottom: 1px dashed #ff6f9c;
+}
+
+.foto { border-radius: 16px; margin-top: 1rem; }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #8a6b78;
+  border-top: 1px solid #ffe4ec;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ff6f9c;
+  outline-offset: 3px;
+  border-radius: 6px;
 }
