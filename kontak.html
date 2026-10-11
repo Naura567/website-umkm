@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak — Bakpia.id</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="brand">🥮 Bakpia.id</a>
+      <nav aria-label="Navigasi utama">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="produk.html">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html" class="aktif">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Kontak</p>
+          <h1>Hubungi Bakpia.id</h1>
+        </div>
+        <figure class="hero-photo">
+          <img src="img/Bakpia Kacang Hijau.jpg" alt="Bakpia siap dikirim" />
+          <figcaption>Siap kirim ke seluruh Indonesia</figcaption>
+        </figure>
+      </section>
+
+      <section class="kontak-section">
+        <div class="form-card">
+          <header class="form-card-head">
+            <span class="form-badge">Formulir Kontak</span>
+            <h2>Kirim Pesan ke Bakpia.id</h2>
+          </header>
+
+          <form id="form-kontak" class="form-kontak" novalidate>
+            <div class="field">
+              <label for="nama">Nama lengkap <span class="wajib">*</span></label>
+              <div class="input-wrap">
+                <input id="nama" name="nama" type="text" placeholder="Contoh: Rani Kusuma" required autocomplete="name" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="wajib">*</span></label>
+              <div class="input-wrap">
+                <input id="email" name="email" type="email" placeholder="nama@email.com" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="wa">Nomor WhatsApp <span class="wajib">*</span></label>
+              <div class="input-wrap">
+                <input id="wa" name="wa" type="tel" placeholder="08xx xxxx xxxx" required inputmode="tel" pattern="[0-9+\-\s]{9,16}" aria-describedby="wa-help" autocomplete="tel" />
+              </div>
+            </div>
+
+            <fieldset class="field field-waktu">
+              <legend>
+                Waktu kontak yang diinginkan <span class="wajib">*</span>
+                <span class="legend-hint">Pilih satu</span>
+              </legend>
+
+              <div class="chip-row">
+                <label class="chip">
+                  <input id="pagi" name="waktu" type="radio" value="Pagi" required />
+                  <span class="chip-text"><strong>Pagi</strong><small>07.00 – 11.00</small></span>
+                </label>
+                <label class="chip">
+                  <input id="siang" name="waktu" type="radio" value="Siang" />
+                  <span class="chip-text"><strong>Siang</strong><small>11.00 – 15.00</small></span>
+                </label>
+                <label class="chip">
+                  <input id="sore" name="waktu" type="radio" value="Sore" />
+                  <span class="chip-text"><strong>Sore</strong><small>15.00 – 18.00</small></span>
+                </label>
+                <label class="chip">
+                  <input id="kapan-saja" name="waktu" type="radio" value="Kapan saja" />
+                  <span class="chip-text"><strong>Kapan saja</strong><small>Fleksibel</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="pesan">Pesan (opsional)</label>
+              <div class="input-wrap textarea-wrap">
+                <span class="input-icon top-align" aria-hidden="true">📝</span>
+                <textarea id="pesan" name="pesan" rows="4" placeholder="Mau pesan varian apa? Berapa box?"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Kirim Pesan</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </form>
+
+          <p id="preview" class="preview" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Bakpia.id Yogyakarta. Dibuat dengan ❤️</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

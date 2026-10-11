@@ -1,20 +1,42 @@
-// --- KODE UNTUK TOMBOL PROMO (Index) ---
-const promo = document.querySelector("#promo");
+/* =========================================================
+   Bakpia.id — Script utama
+   ========================================================= */
 
-if (promo) {
-  promo.addEventListener("click", () => {
-    promo.textContent = "Promo: Beli 2 Box Gratis 1 Box Mini!";
+// Tombol Promo (Beranda)
+const promoButton = document.querySelector("#promo");
+
+if (promoButton) {
+  promoButton.addEventListener("click", () => {
+    promoButton.textContent = "🎉 Promo: Beli 2 Box Gratis 1 Box Mini!";
   });
 }
 
-// Menghitung jumlah baris produk di tabel
+// Info tabel (Produk) — latihan dev console
 const rows = document.querySelectorAll("tbody tr");
 if (rows.length > 0) {
-    console.log("Jumlah produk pada tabel:", rows.length);
+  console.log("Jumlah produk pada tabel:", rows.length);
 }
 
-// Mengambil teks caption tabel
 const caption = document.querySelector("caption");
 if (caption) {
-    console.log("Caption tabel:", caption.textContent);
+  console.log("Caption tabel:", caption.textContent);
+}
+
+// Preview Form Kontak
+const formKontak = document.querySelector("#form-kontak");
+const preview = document.querySelector("#preview");
+
+if (formKontak && preview) {
+  formKontak.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const data = new FormData(formKontak);
+    const nama = data.get("nama");
+    const wa = data.get("wa");
+    const waktu = data.get("waktu");
+
+    preview.textContent = `Terima kasih, ${nama}. Kami akan balas ke ${wa} pada waktu ${waktu}.`;
+
+    formKontak.reset();
+  });
 }
