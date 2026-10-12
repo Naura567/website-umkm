@@ -1,5 +1,5 @@
 /* =========================================================
-   Bakpia.id — Script utama
+   Bakpia.id — Script utama P05
    ========================================================= */
 
 // Tombol Promo (Beranda)
@@ -22,7 +22,7 @@ if (caption) {
   console.log("Caption tabel:", caption.textContent);
 }
 
-// Preview Form Kontak
+// Preview Form Kontak — pakai simbol ✓ agar status tidak bergantung warna saja
 const formKontak = document.querySelector("#form-kontak");
 const preview = document.querySelector("#preview");
 
@@ -35,7 +35,7 @@ if (formKontak && preview) {
     const wa = data.get("wa");
     const waktu = data.get("waktu");
 
-    preview.textContent = `Terima kasih, ${nama}. Kami akan balas ke ${wa} pada waktu ${waktu}.`;
+    preview.textContent = `✓ Terima kasih, ${nama}. Kami akan balas ke ${wa} pada waktu ${waktu}.`;
 
     formKontak.reset();
   });

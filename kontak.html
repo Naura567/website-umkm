@@ -40,11 +40,11 @@
             <h2>Kirim Pesan ke Bakpia.id</h2>
           </header>
 
-          <form id="form-kontak" class="form-kontak" novalidate>
+          <form id="form-kontak" class="form-kontak">
             <div class="field">
               <label for="nama">Nama lengkap <span class="wajib">*</span></label>
               <div class="input-wrap">
-                <input id="nama" name="nama" type="text" placeholder="Contoh: Rani Kusuma" required autocomplete="name" />
+                <input id="nama" name="nama" type="text" placeholder="Contoh: Rani Kusuma" required minlength="3" autocomplete="name" />
               </div>
             </div>
 
@@ -56,10 +56,24 @@
             </div>
 
             <div class="field">
+              <label for="paket">Paket yang diminati <span class="wajib">*</span></label>
+              <div class="input-wrap">
+                <select id="paket" name="paket" required>
+                  <option value="" disabled selected>Pilih varian atau paket bakpia</option>
+                  <option value="Box Isi 10 (Klasik)">Box Isi 10 (Klasik)</option>
+                  <option value="Box Isi 15 (Hemat)">Box Isi 15 (Hemat)</option>
+                  <option value="Box Isi 20 (Spesial)">Box Isi 20 (Spesial)</option>
+                  <option value="Paket Hampers">Paket Hampers Oleh-oleh</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
               <label for="wa">Nomor WhatsApp <span class="wajib">*</span></label>
               <div class="input-wrap">
                 <input id="wa" name="wa" type="tel" placeholder="08xx xxxx xxxx" required inputmode="tel" pattern="[0-9+\-\s]{9,16}" aria-describedby="wa-help" autocomplete="tel" />
               </div>
+              <small id="wa-help" class="help">Nomor aktif untuk konfirmasi pemesanan.</small>
             </div>
 
             <fieldset class="field field-waktu">
@@ -92,7 +106,7 @@
               <label for="pesan">Pesan (opsional)</label>
               <div class="input-wrap textarea-wrap">
                 <span class="input-icon top-align" aria-hidden="true">📝</span>
-                <textarea id="pesan" name="pesan" rows="4" placeholder="Mau pesan varian apa? Berapa box?"></textarea>
+                <textarea id="pesan" name="pesan" rows="4" minlength="5" placeholder="Mau pesan varian apa? Berapa box?"></textarea>
               </div>
             </div>
 
@@ -111,6 +125,7 @@
       <p>&copy; 2026 Bakpia.id Yogyakarta. Dibuat dengan ❤️</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/form.js" defer></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
