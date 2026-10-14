@@ -3,135 +3,142 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Produk Bakpia.id</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <title>Produk &amp; Tarif - Bakpia.id Katalog Bakpia Khas Jogja</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <a href="index.html" class="brand">🥮 Bakpia.id</a>
-      <nav aria-label="Navigasi utama">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="produk.html" class="aktif">Produk</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="kontak.html">Kontak</a>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Bakpia<span>.id</span></a>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a aria-current="page" href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Katalog Lengkap</p>
-          <h1>Pesan Bakpia Favoritmu</h1>
-          <p>
-            Semua varian dipanggang fresh hari itu juga. Minimal 1 box
-            isi 10 pcs, gratis ongkir area Yogyakarta untuk pembelian
-            2 box ke atas.
-          </p>
-        </div>
-        <figure class="hero-photo">
-          <img src="img/Bakpia Ubi.jpg" alt="Bakpia crispy ubi susu" />
-          <figcaption>Best seller: Crispy Ubi Susu</figcaption>
-        </figure>
-      </section>
+    <main id="konten" class="page">
+      <h1>Katalog Produk &amp; Varian Bakpia.id</h1>
+      <p>
+        Semua varian dipanggang fresh setiap pagi dengan resep keluarga. Kemasan higienis
+        minimal 1 box isi 10 pcs, dengan penawaran gratis ongkir untuk area Yogyakarta
+        pada pembelian minimal 2 box.
+      </p>
 
-      <section>
-        <header class="section-head">
-          <h2>Kategori</h2>
-          <p>Pilih sesuai selera maw yang klasik, crispy, kukus, atau pandan.</p>
-        </header>
-        <ul class="kategori">
-          <li>🥮 Klasik</li>
-          <li>🧀 Crispy</li>
-          <li>🍫 Kukus</li>
-          <li>🍵 Pandan</li>
+      <section aria-labelledby="kategori-title">
+        <h2 id="kategori-title">Kategori Produk</h2>
+        <ul>
+          <li><strong>Varian Klasik:</strong> Bakpia panggang legendaris kacang hijau dan basah original dengan tekstur kulit lembut dan isian legit.</li>
+          <li><strong>Varian Crispy:</strong> Kulit berlapis tipis renyah dengan isian creamy lembut perpaduan ubi ungu dan susu kental manis.</li>
+          <li><strong>Varian Kukus:</strong> Tekstur bolu bakpia moist dan empuk dengan lelehan cokelat premium di bagian tengah.</li>
+          <li><strong>Varian Pandan:</strong> Sensasi aroma alami daun pandan segar berpadu dengan kelembutan kacang hijau pilihan.</li>
         </ul>
       </section>
 
-      <section>
-        <header class="section-head">
-          <h2>Katalog Produk</h2>
-          <p>Semua varian yang sedang tersedia hari ini.</p>
-        </header>
+      <section aria-labelledby="harga-title">
+        <h2 id="harga-title">Daftar Tarif &amp; Harga Produk</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Daftar harga Bakpia.id per box (isi 10 pcs)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nama Produk</th>
+                <th scope="col">Kategori Varian</th>
+                <th scope="col">Harga Per Box</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bakpia Kacang Hijau Klasik</th>
+                <td>Klasik Tradisional</td>
+                <td>Rp35.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Bakpia Basah Original</th>
+                <td>Klasik Basah</td>
+                <td>Rp36.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Bakpia Crispy Ubi Susu</th>
+                <td>Crispy Modern</td>
+                <td>Rp38.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Bakpia Kukus Cokelat Melt</th>
+                <td>Kukus Lembut</td>
+                <td>Rp40.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Bakpia Cokelat Kacang</th>
+                <td>Kukus Gurih</td>
+                <td>Rp41.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Bakpia Pandan Wangi</th>
+                <td>Pandan Alami</td>
+                <td>Rp42.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-        <div class="grid">
-          <article>
+      <section aria-labelledby="katalog-visual-title">
+        <h2 id="katalog-visual-title">Etalase Varian Bakpia</h2>
+        <p>Pilih varian rasa favorit Anda untuk camilan keluarga atau buah tangan istimewa:</p>
+
+        <div class="grid-card">
+          <article class="product-card">
             <img src="img/Bakpia Kcang Ijo.jpg" alt="Bakpia kacang hijau klasik" />
             <h3>Kacang Hijau Klasik</h3>
-            <p class="desc">Isian kacang hijau halus, manisnya pas. Varian legendaris sejak 2020.</p>
+            <p class="desc">Isian kacang hijau halus, manisnya pas dan tidak eneg. Varian legendaris sejak 2020.</p>
             <p class="harga">Rp35.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Kacang Hijau.jpg" alt="Bakpia basah original" />
             <h3>Basah Original</h3>
             <p class="desc">Varian basah klasik dengan kulit tipis dan isian padat merata.</p>
             <p class="harga">Rp36.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Ubi.jpg" alt="Bakpia crispy ubi susu" />
             <h3>Crispy Ubi Susu</h3>
-            <p class="desc">Kulit crispy berlapis dengan isian ubi ungu dan susu kental manis.</p>
+            <p class="desc">Kulit crispy berlapis dengan isian ubi ungu asli dan susu kental manis gurih.</p>
             <p class="harga">Rp38.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Kacang Coklat.jpg" alt="Bakpia kukus cokelat melt" />
             <h3>Kukus Cokelat Melt</h3>
-            <p class="desc">Cokelat lumer di dalam bakpia kukus yang lembut dan moist.</p>
+            <p class="desc">Cokelat lumer di dalam bakpia kukus yang lembut, nikmat disantap hangat saat santai.</p>
             <p class="harga">Rp40.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Coklat.jpg" alt="Bakpia cokelat kacang" />
             <h3>Cokelat Kacang</h3>
-            <p class="desc">Perpaduan cokelat premium dan kacang sangrai renyah.</p>
+            <p class="desc">Perpaduan cokelat pekat dan kacang sangrai renyah yang memberi tekstur gurih nikmat.</p>
             <p class="harga">Rp41.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Pandan.jpg" alt="Bakpia pandan wangi" />
             <h3>Pandan Wangi</h3>
-            <p class="desc">Aroma daun pandan asli dengan isian kacang hijau lembut.</p>
+            <p class="desc">Aroma daun pandan asli dengan isian kacang hijau lembut yang menyegarkan selera.</p>
             <p class="harga">Rp42.000 <span>/ box isi 10</span></p>
           </article>
         </div>
       </section>
-
-      <section>
-        <header class="section-head">
-          <h2>Tabel Harga</h2>
-          <p>Semua harga per box isi 10 pcs.</p>
-        </header>
-        <div class="tabel-wrap">
-          <table>
-            <caption>Daftar harga Bakpia.id per box (isi 10 pcs)</caption>
-            <thead>
-              <tr>
-                <th scope="col">Produk</th>
-                <th scope="col">Kategori</th>
-                <th scope="col">Harga</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">Bakpia Kacang Hijau Klasik</th><td>Klasik</td><td>Rp35.000</td></tr>
-              <tr><th scope="row">Bakpia Basah Original</th><td>Klasik</td><td>Rp36.000</td></tr>
-              <tr><th scope="row">Bakpia Crispy Ubi Susu</th><td>Crispy</td><td>Rp38.000</td></tr>
-              <tr><th scope="row">Bakpia Kukus Cokelat Melt</th><td>Kukus</td><td>Rp40.000</td></tr>
-              <tr><th scope="row">Bakpia Cokelat Kacang</th><td>Kukus</td><td>Rp41.000</td></tr>
-              <tr><th scope="row">Bakpia Pandan Wangi</th><td>Pandan</td><td>Rp42.000</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Bakpia.id — Yogyakarta. Dibuat dengan ❤️</p>
+    <footer class="site-footer">
+      <p>&copy; 2026 Bakpia.id Yogyakarta. Data dan layanan pada halaman ini disusun untuk kebutuhan praktikum.</p>
     </footer>
 
     <script src="js/script.js"></script>

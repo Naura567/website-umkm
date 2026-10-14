@@ -3,50 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bakpia.id Beranda</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <title>Beranda - Bakpia.id Khas Yogyakarta</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <a href="index.html" class="brand">🥮 Bakpia.id</a>
-      <nav aria-label="Navigasi utama">
-        <a href="index.html" class="aktif">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="produk.html">Produk</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="kontak.html">Kontak</a>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Bakpia<span>.id</span></a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
+    <main id="konten" class="page">
+      <section aria-labelledby="hero-title" class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Khas Yogyakarta · Sejak 2020</p>
-          <h1>Bakpia Premium, Lembut &amp; Fresh</h1>
+          <h1 id="hero-title">Bakpia Premium, Lembut &amp; Fresh</h1>
           <p>
             Dipanggang fresh setiap pagi dengan resep keluarga. Isian lembut,
             kulit renyah berlapis teman ngeteh paling pas untuk oleh-oleh
             istimewa dari Jogja.
           </p>
-          <button id="promo" type="button">🎉 Cek Promo Hari Ini</button>
+          <button id="promoButton" type="button">Lihat promo hari ini</button>
         </div>
-        <figure class="hero-photo">
-          <img src="img/Bakpia Kacang Hijau.jpg" alt="Bakpia kacang hijau klasik disajikan di piring" />
-          <figcaption>Fresh from oven dipanggang tiap pagi</figcaption>
-        </figure>
       </section>
 
-      <section>
-        <header class="section-head">
-          <h2>Varian Favorit</h2>
-          <p>Varian yang paling sering dicari pelanggan kami.</p>
-        </header>
+      <section aria-labelledby="varian-favorit-title">
+        <h2 id="varian-favorit-title">Varian Favorit</h2>
+        <p>Varian yang paling sering dicari pelanggan setia kami.</p>
 
-        <div class="grid">
-          <article>
+        <div class="grid-card">
+          <article class="product-card">
             <img src="img/Bakpia Kcang Ijo.jpg" alt="Bakpia kacang hijau klasik" />
             <h3>Kacang Hijau Klasik</h3>
             <p class="desc">
@@ -57,7 +51,7 @@
             <p class="harga">Rp35.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Ubi.jpg" alt="Bakpia crispy ubi susu" />
             <h3>Crispy Ubi Susu</h3>
             <p class="desc">
@@ -68,7 +62,7 @@
             <p class="harga">Rp38.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Kacang Coklat.jpg" alt="Bakpia kukus cokelat melt" />
             <h3>Kukus Cokelat Melt</h3>
             <p class="desc">
@@ -79,7 +73,7 @@
             <p class="harga">Rp40.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Pandan.jpg" alt="Bakpia pandan wangi" />
             <h3>Pandan Wangi</h3>
             <p class="desc">
@@ -90,7 +84,7 @@
             <p class="harga">Rp42.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Kacang Hijau.jpg" alt="Bakpia basah original" />
             <h3>Basah Original</h3>
             <p class="desc">
@@ -101,7 +95,7 @@
             <p class="harga">Rp36.000 <span>/ box isi 10</span></p>
           </article>
 
-          <article>
+          <article class="product-card">
             <img src="img/Bakpia Coklat.jpg" alt="Bakpia cokelat kacang" />
             <h3>Cokelat Kacang</h3>
             <p class="desc">
@@ -113,22 +107,30 @@
         </div>
       </section>
 
-      <section id="kontak-singkat" class="kontak">
-        <header class="section-head">
-          <h2>Kontak Singkat</h2>
-          <p>Mampir ke toko atau hubungi kami langsung.</p>
-        </header>
+      <section aria-labelledby="keunggulan-title">
+        <h2 id="keunggulan-title">Kenapa Memilih Bakpia.id?</h2>
+        <p>Kami mengedepankan kualitas rasa autentik, bahan alami tanpa pengawet buatan, dan kemasan higienis agar bakpia tetap lembut dan aman dinikmati seluruh keluarga.</p>
         <ul>
-          <li>📍 Jl. Malioboro No. 123, Yogyakarta</li>
-          <li>🕒 Setiap hari, 07.00 – 21.00 WIB</li>
-          <li>📞 +62 812-3456-7890</li>
-          <li>💬 <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">Chat WhatsApp</a></li>
+          <li><strong>Bahan Alami Pilihan:</strong> Kacang hijau murni dan daun pandan segar tanpa pewarna sintetis.</li>
+          <li><strong>Fresh From Oven:</strong> Dipanggang bertahap setiap pagi untuk menjamin kerenyahan kulit.</li>
+          <li><strong>Kemasan Rapi &amp; Higienis:</strong> Cocok untuk buah tangan istimewa langsung dari Yogyakarta.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="kontak-singkat-title">
+        <h2 id="kontak-singkat-title">Kontak &amp; Gerai Kami</h2>
+        <p>Mampir ke toko atau hubungi kami langsung untuk pemesanan:</p>
+        <ul>
+          <li><strong>Alamat Toko:</strong> Jl. Malioboro No. 123, Yogyakarta</li>
+          <li><strong>Jam Operasional:</strong> Setiap hari, 07.00 – 21.00 WIB</li>
+          <li><strong>Telepon/WhatsApp:</strong> +62 812-3456-7890</li>
+          <li><strong>Layanan WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">Chat WhatsApp Sekarang</a></li>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Bakpia.id Yogyakarta. Dibuat dengan ❤️</p>
+    <footer class="site-footer">
+      <p>&copy; 2026 Bakpia.id Yogyakarta. Data dan layanan pada halaman ini disusun untuk kebutuhan praktikum.</p>
     </footer>
 
     <script src="js/script.js"></script>

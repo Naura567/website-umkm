@@ -3,129 +3,94 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kontak — Bakpia.id</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <title>Kontak &amp; Pemesanan - Bakpia.id Layanan Pelanggan</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/form.js" defer></script>
   </head>
   <body>
-    <header>
-      <a href="index.html" class="brand">🥮 Bakpia.id</a>
-      <nav aria-label="Navigasi utama">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="produk.html">Produk</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="kontak.html" class="aktif">Kontak</a>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Bakpia<span>.id</span></a>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a aria-current="page" href="kontak.html">Kontak</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Kontak</p>
-          <h1>Hubungi Bakpia.id</h1>
+    <main id="konten" class="page">
+      <h1>Kontak &amp; Pemesanan Bakpia.id</h1>
+      <p>
+        Silakan lengkapi formulir di bawah ini untuk pemesanan varian bakpia fresh,
+        paket hampers oleh-oleh, atau konfirmasi pengiriman ke alamat tujuan Anda.
+      </p>
+
+      <form id="form-kontak" action="#" method="post">
+        <div class="field">
+          <label for="nama">Nama Lengkap</label>
+          <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3" placeholder="Contoh: Rani Kusuma" />
         </div>
-        <figure class="hero-photo">
-          <img src="img/Bakpia Kacang Hijau.jpg" alt="Bakpia siap dikirim" />
-          <figcaption>Siap kirim ke seluruh Indonesia</figcaption>
-        </figure>
-      </section>
 
-      <section class="kontak-section">
-        <div class="form-card">
-          <header class="form-card-head">
-            <span class="form-badge">Formulir Kontak</span>
-            <h2>Kirim Pesan ke Bakpia.id</h2>
-          </header>
-
-          <form id="form-kontak" class="form-kontak">
-            <div class="field">
-              <label for="nama">Nama lengkap <span class="wajib">*</span></label>
-              <div class="input-wrap">
-                <input id="nama" name="nama" type="text" placeholder="Contoh: Rani Kusuma" required minlength="3" autocomplete="name" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="email">Email <span class="wajib">*</span></label>
-              <div class="input-wrap">
-                <input id="email" name="email" type="email" placeholder="nama@email.com" required autocomplete="email" />
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="paket">Paket yang diminati <span class="wajib">*</span></label>
-              <div class="input-wrap">
-                <select id="paket" name="paket" required>
-                  <option value="" disabled selected>Pilih varian atau paket bakpia</option>
-                  <option value="Box Isi 10 (Klasik)">Box Isi 10 (Klasik)</option>
-                  <option value="Box Isi 15 (Hemat)">Box Isi 15 (Hemat)</option>
-                  <option value="Box Isi 20 (Spesial)">Box Isi 20 (Spesial)</option>
-                  <option value="Paket Hampers">Paket Hampers Oleh-oleh</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="wa">Nomor WhatsApp <span class="wajib">*</span></label>
-              <div class="input-wrap">
-                <input id="wa" name="wa" type="tel" placeholder="08xx xxxx xxxx" required inputmode="tel" pattern="[0-9+\-\s]{9,16}" aria-describedby="wa-help" autocomplete="tel" />
-              </div>
-              <small id="wa-help" class="help">Nomor aktif untuk konfirmasi pemesanan.</small>
-            </div>
-
-            <fieldset class="field field-waktu">
-              <legend>
-                Waktu kontak yang diinginkan <span class="wajib">*</span>
-                <span class="legend-hint">Pilih satu</span>
-              </legend>
-
-              <div class="chip-row">
-                <label class="chip">
-                  <input id="pagi" name="waktu" type="radio" value="Pagi" required />
-                  <span class="chip-text"><strong>Pagi</strong><small>07.00 – 11.00</small></span>
-                </label>
-                <label class="chip">
-                  <input id="siang" name="waktu" type="radio" value="Siang" />
-                  <span class="chip-text"><strong>Siang</strong><small>11.00 – 15.00</small></span>
-                </label>
-                <label class="chip">
-                  <input id="sore" name="waktu" type="radio" value="Sore" />
-                  <span class="chip-text"><strong>Sore</strong><small>15.00 – 18.00</small></span>
-                </label>
-                <label class="chip">
-                  <input id="kapan-saja" name="waktu" type="radio" value="Kapan saja" />
-                  <span class="chip-text"><strong>Kapan saja</strong><small>Fleksibel</small></span>
-                </label>
-              </div>
-            </fieldset>
-
-            <div class="field">
-              <label for="pesan">Pesan (opsional)</label>
-              <div class="input-wrap textarea-wrap">
-                <span class="input-icon top-align" aria-hidden="true">📝</span>
-                <textarea id="pesan" name="pesan" rows="4" minlength="5" placeholder="Mau pesan varian apa? Berapa box?"></textarea>
-              </div>
-            </div>
-
-            <button type="submit" class="submit-btn">
-              <span>Kirim Pesan</span>
-              <span aria-hidden="true">→</span>
-            </button>
-          </form>
-
-          <p id="preview" class="preview" aria-live="polite"></p>
+        <div class="field">
+          <label for="email">Alamat Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="nama@email.com" />
         </div>
+
+        <div class="field">
+          <label for="telepon">Nomor WhatsApp / Telepon</label>
+          <input id="telepon" name="telepon" type="tel" autocomplete="tel" required placeholder="Contoh: 081234567890" />
+        </div>
+
+        <div class="field">
+          <label for="paket">Pilihan Paket / Varian Bakpia</label>
+          <select id="paket" name="paket" required>
+            <option value="">-- Pilih Paket Bakpia.id --</option>
+            <option value="Box Isi 10 - Kacang Hijau Klasik (Rp35.000)">Box Isi 10 - Kacang Hijau Klasik (Rp35.000)</option>
+            <option value="Box Isi 10 - Basah Original (Rp36.000)">Box Isi 10 - Basah Original (Rp36.000)</option>
+            <option value="Box Isi 10 - Crispy Ubi Susu (Rp38.000)">Box Isi 10 - Crispy Ubi Susu (Rp38.000)</option>
+            <option value="Box Isi 10 - Kukus Cokelat Melt (Rp40.000)">Box Isi 10 - Kukus Cokelat Melt (Rp40.000)</option>
+            <option value="Box Isi 10 - Cokelat Kacang (Rp41.000)">Box Isi 10 - Cokelat Kacang (Rp41.000)</option>
+            <option value="Box Isi 10 - Pandan Wangi (Rp42.000)">Box Isi 10 - Pandan Wangi (Rp42.000)</option>
+            <option value="Paket Hampers Spesial Oleh-oleh">Paket Hampers Spesial Oleh-oleh (Kombinasi Varian)</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Jenis Pesanan / Keperluan</legend>
+          <label><input type="radio" name="topik" value="pesanan-reguler" required /> Pemesanan konsumsi langsung / harian</label>
+          <label><input type="radio" name="topik" value="oleh-oleh" /> Pesanan oleh-oleh luar kota</label>
+          <label><input type="radio" name="topik" value="hampers-acara" /> Pesanan hampers / hajatan / acara khusus</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Waktu yang Diinginkan untuk Dihubungi</legend>
+          <label><input type="radio" name="waktu" value="pagi" required /> Pagi (07.00 – 11.00 WIB)</label>
+          <label><input type="radio" name="waktu" value="siang" /> Siang (11.00 – 15.00 WIB)</label>
+          <label><input type="radio" name="waktu" value="sore" /> Sore (15.00 – 19.00 WIB)</label>
+        </fieldset>
+
+        <div class="field">
+          <label for="pesan">Catatan Pesanan / Alamat Pengiriman</label>
+          <textarea id="pesan" name="pesan" rows="5" required minlength="10" placeholder="Sebutkan varian yang diinginkan, jumlah box, alamat pengiriman, atau catatan khusus lainnya..."></textarea>
+        </div>
+
+        <button type="submit">Kirim Pesanan &amp; Tampilkan Preview</button>
+      </form>
+
+      <section aria-labelledby="preview-title" class="preview-section">
+        <h2 id="preview-title">Preview Data Pemesanan Bakpia</h2>
+        <pre id="preview-form" aria-live="polite">Data pemesanan akan muncul di sini setelah formulir dikirimkan.</pre>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Bakpia.id Yogyakarta. Dibuat dengan ❤️</p>
+    <footer class="site-footer">
+      <p>&copy; 2026 Bakpia.id Yogyakarta. Data dan layanan pada halaman ini disusun untuk kebutuhan praktikum.</p>
     </footer>
 
-    <script src="js/form.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

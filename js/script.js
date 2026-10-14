@@ -1,42 +1,31 @@
-/* =========================================================
-   Bakpia.id — Script utama P05
-   ========================================================= */
+const form = document.querySelector("#form-kontak");
+const preview = document.querySelector("#preview-form");
 
-// Tombol Promo (Beranda)
-const promoButton = document.querySelector("#promo");
-
-if (promoButton) {
-  promoButton.addEventListener("click", () => {
-    promoButton.textContent = "🎉 Promo: Beli 2 Box Gratis 1 Box Mini!";
-  });
-}
-
-// Info tabel (Produk) — latihan dev console
-const rows = document.querySelectorAll("tbody tr");
-if (rows.length > 0) {
-  console.log("Jumlah produk pada tabel:", rows.length);
-}
-
-const caption = document.querySelector("caption");
-if (caption) {
-  console.log("Caption tabel:", caption.textContent);
-}
-
-// Preview Form Kontak — pakai simbol ✓ agar status tidak bergantung warna saja
-const formKontak = document.querySelector("#form-kontak");
-const preview = document.querySelector("#preview");
-
-if (formKontak && preview) {
-  formKontak.addEventListener("submit", (event) => {
+if (form && preview) {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const data = new FormData(formKontak);
-    const nama = data.get("nama");
-    const wa = data.get("wa");
-    const waktu = data.get("waktu");
+    const data = new FormData(form);
 
-    preview.textContent = `✓ Terima kasih, ${nama}. Kami akan balas ke ${wa} pada waktu ${waktu}.`;
+    const nama = data.get("nama") || "-";
+    const email = data.get("email") || "-";
+    const telepon = data.get("telepon") || "-";
+    const paket = data.get("paket") || "-";
+    const topik = data.get("topik") || "-";
+    const waktu = data.get("waktu") || "-";
+    const pesan = data.get("pesan") || "-";
 
-    formKontak.reset();
+    preview.textContent = [
+      "=== DATA PEMESANAN BAKPIA.ID ===",
+      `Nama Pemesan    : ${nama}`,
+      `Alamat Email    : ${email}`,
+      `Nomor WhatsApp  : ${telepon}`,
+      `Paket Bakpia    : ${paket}`,
+      `Jenis Pesanan   : ${topik}`,
+      `Waktu Kontak    : ${waktu}`,
+      `Catatan Pesanan : ${pesan}`,
+      "================================",
+      "Status: Form terkirim sukses tanpa reload. Tim Bakpia.id akan segera memproses pesanan Anda.",
+    ].join("\n");
   });
 }

@@ -3,114 +3,78 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Galeri — Bakpia.id</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <title>Galeri &amp; Dokumentasi - Bakpia.id Dapur &amp; Produk</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <a href="index.html" class="brand">🥮 Bakpia.id</a>
-      <nav aria-label="Navigasi utama">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="produk.html">Produk</a>
-        <a href="galeri.html" class="aktif">Galeri</a>
-        <a href="kontak.html">Kontak</a>
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">Bakpia<span>.id</span></a>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a aria-current="page" href="galeri.html">Galeri</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Galeri</p>
-          <h1>Intip Dapur &amp; Produk Kami</h1>
-          <p>
-            Lihat langsung proses pembuatan, produk terbaru, dan suasana
-            dapur kami di Yogyakarta.
-          </p>
-        </div>
-        <figure class="hero-photo">
-          <img src="img/Bakpia Coklat.jpg" alt="Bakpia kukus cokelat melt" />
-          <figcaption>Kukus Cokelat Melt lembut dan lumer</figcaption>
-        </figure>
-      </section>
+    <main id="konten" class="page">
+      <h1>Galeri &amp; Dokumentasi Bakpia.id</h1>
+      <p>
+        Dokumentasi proses produksi dapur, produk fresh yang baru matang,
+        hingga suasana hangat menikmati bakpia khas Yogyakarta.
+      </p>
 
-      <section>
-        <header class="section-head">
-          <h2>Produk Baru Bakpia Pandan Wangi</h2>
-          <p>Varian terbaru dengan aroma daun pandan asli.</p>
-        </header>
-
-        <div class="grid">
-          <figure class="figure">
-            <img src="img/Bakpia Pandan.jpg" alt="Bakpia pandan wangi dengan isian kacang hijau, disajikan di piring kecil" />
-            <figcaption>
-              Bakpia Pandan Wangi isian kacang hijau dengan aroma daun
-              pandan. Dibuat terbatas setiap hari karena pandan segar
-              cepat habis. Rp42.000 per box.
-            </figcaption>
+      <section aria-labelledby="media-title">
+        <h2 id="media-title">Dokumentasi Produk &amp; Suasana Dapur</h2>
+        <div class="gallery-list">
+          <figure class="media-card">
+            <img src="img/Bakpia Pandan.jpg" alt="Bakpia pandan wangi dengan isian kacang hijau disajikan di piring kecil" />
+            <figcaption>Bakpia Pandan Wangi dengan aroma daun pandan alami dan isian lembut pilihan.</figcaption>
           </figure>
 
-          <figure class="figure">
-            <img src="img/Bakpia Kcang Ijo.jpg" alt="Bakpia kacang hijau klasik" />
-            <figcaption>
-              Kacang Hijau Klasik varian legendaris yang tidak pernah
-              sepi peminat. Isian halus, manisnya pas.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section>
-        <header class="section-head">
-          <h2>Suasana Dapur</h2>
-          <p>Setiap box dipanggang bertahap, dikemas setelah matang DIJAMIN MANTAPPP.</p>
-        </header>
-
-        <div class="grid">
-          <figure class="figure">
-            <img src="img/POM Matcha Set V1 3pcs Chasen Chashaku Bamboo 3in1 Lengkap Sendok Aduk Whisk Peralatan Bikin Buat.jpg" alt="Ilustrasi proses menyeduh teh hijau untuk menemani bakpia" />
-            <figcaption>
-              Proses Seduh bakpia paling nikmat disantap dengan teh
-              hangat di sore hari.
-            </figcaption>
+          <figure class="media-card">
+            <img src="img/Bakpia Kcang Ijo.jpg" alt="Bakpia kacang hijau klasik disajikan hangat" />
+            <figcaption>Kacang Hijau Klasik, varian legendaris yang menjadi favorit utama sejak awal berdiri.</figcaption>
           </figure>
 
-          <figure class="figure">
-            <img src="img/74027987622374014.jpg" alt="Bakpia crispy ubi susu" />
-            <figcaption>
-              Crispy Ubi Susu baru keluar oven, siap dikemas dan
-              dikirim hari itu juga.
-            </figcaption>
+          <figure class="media-card">
+            <img src="img/POM Matcha Set V1 3pcs Chasen Chashaku Bamboo 3in1 Lengkap Sendok Aduk Whisk Peralatan Bikin Buat.jpg" alt="Ilustrasi set seduh teh hijau tradisional" />
+            <figcaption>Suasana ngeteh santai sore hari, momen paling pas untuk menikmati kelembutan bakpia.</figcaption>
           </figure>
 
-          <figure class="figure">
-            <img src="img/8 Interesting Things to Do & See in Yogyakarta, Indonesia _ Urban Pixxels.jpg" alt="Dapur produksi Bakpia.id" />
-            <figcaption>
-              Dapur Produksi tempat kami memanggang ratusan box
-              setiap pagi sejak 2020.
-            </figcaption>
+          <figure class="media-card">
+            <img src="img/74027987622374014.jpg" alt="Bakpia crispy ubi susu baru keluar dari pemanggang" />
+            <figcaption>Crispy Ubi Susu baru keluar dari oven, siap dikemas rapi dan dikirim hari itu juga.</figcaption>
+          </figure>
+
+          <figure class="media-card">
+            <img src="img/8 Interesting Things to Do & See in Yogyakarta, Indonesia _ Urban Pixxels.jpg" alt="Suasana sudut kota Yogyakarta tempat gerai Bakpia.id" />
+            <figcaption>Nuansa kota Yogyakarta yang menjadi inspirasi kehangatan resep keluarga kami sejak 2020.</figcaption>
+          </figure>
+
+          <figure class="media-card">
+            <img src="img/Bakpia Coklat.jpg" alt="Bakpia kukus cokelat lumer lembut" />
+            <figcaption>Kukus Cokelat Melt lembut dengan sensasi cokelat lumer di setiap gigitan.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section>
-        <header class="section-head">
-          <h2>Suara Proses Seduh</h2>
-          <p>Dengarkan suasana saat menikmati bakpia ditengan ramai dan hangat nya Malioboro.</p>
-        </header>
-        <audio controls preload="metadata">
+      <section aria-labelledby="audio-title">
+        <h2 id="audio-title">Suasana Menikmati Bakpia di Yogyakarta</h2>
+        <p id="audio-note">Dengarkan audio pengiring suasana hangat dan tenang saat menikmati sajian bakpia di Yogyakarta.</p>
+        <audio controls aria-describedby="audio-note" src="audio/M..mp3">
           <source src="audio/M..mp3" type="audio/mpeg" />
-          Browser kamu tidak mendukung elemen audio. Kamu bisa
-          <a href="assets/audio/proses-seduh.mp3">mengunduh berkas audio ini</a>.
+          Browser Anda tidak mendukung pemutar audio.
         </audio>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Bakpia.id Yogyakarta. Dibuat dengan ❤️</p>
+    <footer class="site-footer">
+      <p>&copy; 2026 Bakpia.id Yogyakarta. Data dan layanan pada halaman ini disusun untuk kebutuhan praktikum.</p>
     </footer>
 
     <script src="js/script.js"></script>
