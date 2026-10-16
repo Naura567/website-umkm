@@ -64,7 +64,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Header & navigasi (baseline mobile: kolom) */
+/* Header & navigasi (baseline mobile: brand di atas, menu satu baris yang bisa digeser) */
 .site-header {
   background-color: var(--color-surface);
   border-bottom: 2px solid var(--color-border);
@@ -100,15 +100,18 @@ body {
 .nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.25rem;
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--space-1);
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .nav li {
   margin: 0;
+  flex: 0 0 auto;
 }
 
 .nav a {
@@ -116,7 +119,8 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  padding: 0.35rem 0.6rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
   border-radius: var(--radius-sm);
   transition: color 0.2s ease, background-color 0.2s ease;
 }
@@ -292,8 +296,7 @@ figcaption {
   border-radius: var(--radius-sm);
 }
 
-/* GRID katalog produk & galeri (baseline mobile: satu kolom) */
-.product-grid,
+/* Galeri: baseline satu kolom */
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -309,6 +312,27 @@ figcaption {
   height: clamp(180px, 40vw, 220px);
 }
 
+/* Katalog: baseline satu baris horizontal yang bisa digeser */
+.product-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(80%, 18rem);
+  gap: var(--space-3);
+  margin: 1.5rem 0 2.5rem;
+  padding: 0.5rem 0 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.product-grid > .product-card {
+  scroll-snap-align: start;
+}
+
+.product-grid:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
 /* Kartu produk (FLEXBOX kolom) + POSITIONING badge */
 .product-card {
   position: relative;
@@ -317,7 +341,7 @@ figcaption {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 1.25rem;
+  padding: clamp(1rem, 3vw, 1.25rem);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 4px 10px rgba(40, 33, 36, 0.03);
 }
@@ -330,7 +354,7 @@ figcaption {
 
 .product-card img {
   width: 100%;
-  height: 200px;
+  height: clamp(140px, 38vw, 200px);
   object-fit: cover;
   border-radius: var(--radius-sm);
   margin-bottom: 0.75rem;
@@ -634,17 +658,27 @@ button[type="submit"]:focus-visible {
 }
 
 /* ===== BREAKPOINT BERBASIS KONTEN (mobile-first, di akhir stylesheet) ===== */
+@media (min-width: 36rem) {
+  .product-grid {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 0;
+  }
+}
+
 @media (min-width: 42rem) {
-  .nav ul { flex-direction: row; }
   .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 48rem) {
   .hero { grid-template-columns: 1.2fr 0.8fr; }
-  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 60rem) {
   .nav { flex-direction: row; align-items: center; justify-content: space-between; }
+  .nav ul { overflow-x: visible; padding-bottom: 0; }
   .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
