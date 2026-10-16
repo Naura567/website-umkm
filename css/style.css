@@ -64,7 +64,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Header & navigasi (FLEXBOX: satu dimensi) */
+/* Header & navigasi (baseline mobile: kolom) */
 .site-header {
   background-color: var(--color-surface);
   border-bottom: 2px solid var(--color-border);
@@ -79,10 +79,9 @@ body {
   max-width: 980px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   gap: var(--space-3);
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .nav .brand {
@@ -103,6 +102,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   gap: var(--space-2);
   flex-wrap: wrap;
 }
@@ -191,16 +191,16 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/* HERO (GRID: dua wilayah) */
+/* HERO (baseline mobile: satu kolom, nilai fluida dengan clamp) */
 .hero {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: clamp(1rem, 4vw, 2rem);
   margin-bottom: var(--space-4);
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--space-4);
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 4vw, 2.5rem);
   align-items: center;
   box-shadow: 0 8px 24px rgba(190, 38, 86, 0.05);
 }
@@ -287,22 +287,18 @@ figcaption {
 
 .media-card img {
   width: 100%;
-  height: 240px;
+  height: clamp(180px, 45vw, 240px);
   object-fit: cover;
   border-radius: var(--radius-sm);
 }
 
-/* GRID: katalog produk (3 tracks) dan galeri (2 tracks) */
+/* GRID katalog produk & galeri (baseline mobile: satu kolom) */
 .product-grid,
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-3);
   margin: 1.5rem 0 2.5rem;
-}
-
-.gallery-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .gallery-grid .media-card {
@@ -310,12 +306,12 @@ figcaption {
 }
 
 .gallery-grid .media-card img {
-  height: 220px;
+  height: clamp(180px, 40vw, 220px);
 }
 
 /* Kartu produk (FLEXBOX kolom) + POSITIONING badge */
 .product-card {
-  position: relative; 
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: var(--color-surface);
@@ -403,11 +399,21 @@ audio {
   accent-color: var(--color-secondary);
 }
 
-/* Tabel */
-.table-wrap {
+/* Tabel: hanya wrapper yang boleh digulir horizontal */
+.table-scroll {
+  max-width: 100%;
   overflow-x: auto;
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.table-scroll table {
+  min-width: 40rem;
 }
 
 table {
@@ -625,4 +631,20 @@ button[type="submit"]:focus-visible {
 
 .site-footer p {
   margin: 0;
+}
+
+/* ===== BREAKPOINT BERBASIS KONTEN (mobile-first, di akhir stylesheet) ===== */
+@media (min-width: 42rem) {
+  .nav ul { flex-direction: row; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 48rem) {
+  .hero { grid-template-columns: 1.2fr 0.8fr; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 60rem) {
+  .nav { flex-direction: row; align-items: center; justify-content: space-between; }
+  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
