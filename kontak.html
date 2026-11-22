@@ -31,25 +31,30 @@
         paket hampers oleh-oleh, atau konfirmasi pengiriman ke alamat tujuan Anda.
       </p>
 
-      <form id="form-kontak" action="#" method="post">
+      <p id="form-feedback" class="form-feedback" aria-live="polite">Isi form kontak dengan lengkap.</p>
+
+      <form id="form-kontak" action="#" method="post" novalidate>
         <div class="field">
           <label for="nama">Nama Lengkap</label>
-          <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3" placeholder="Contoh: Rani Kusuma" />
+          <input id="nama" name="nama" type="text" autocomplete="name" required minlength="3" aria-describedby="nama-error" placeholder="Contoh: Rani Kusuma" />
+          <p id="nama-error" class="field-error" aria-live="polite"></p>
         </div>
 
         <div class="field">
           <label for="email">Alamat Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required placeholder="nama@email.com" />
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" placeholder="nama@email.com" />
+          <p id="email-error" class="field-error" aria-live="polite"></p>
         </div>
 
         <div class="field">
           <label for="telepon">Nomor WhatsApp / Telepon</label>
-          <input id="telepon" name="telepon" type="tel" autocomplete="tel" required placeholder="Contoh: 081234567890" />
+          <input id="telepon" name="telepon" type="tel" autocomplete="tel" required pattern="08[0-9]{8,11}" aria-describedby="telepon-error" placeholder="Contoh: 081234567890" />
+          <p id="telepon-error" class="field-error" aria-live="polite"></p>
         </div>
 
         <div class="field">
           <label for="paket">Pilihan Paket / Varian Bakpia</label>
-          <select id="paket" name="paket" required>
+          <select id="paket" name="paket" required aria-describedby="paket-error">
             <option value="">-- Pilih Paket Bakpia.id --</option>
             <option value="Box Isi 10 - Kacang Hijau Klasik (Rp35.000)">Box Isi 10 - Kacang Hijau Klasik (Rp35.000)</option>
             <option value="Box Isi 10 - Basah Original (Rp36.000)">Box Isi 10 - Basah Original (Rp36.000)</option>
@@ -59,6 +64,7 @@
             <option value="Box Isi 10 - Pandan Wangi (Rp42.000)">Box Isi 10 - Pandan Wangi (Rp42.000)</option>
             <option value="Paket Hampers Spesial Oleh-oleh">Paket Hampers Spesial Oleh-oleh (Kombinasi Varian)</option>
           </select>
+          <p id="paket-error" class="field-error" aria-live="polite"></p>
         </div>
 
         <fieldset>
@@ -67,6 +73,7 @@
           <label><input type="radio" name="topik" value="oleh-oleh" /> Pesanan oleh-oleh luar kota</label>
           <label><input type="radio" name="topik" value="hampers-acara" /> Pesanan hampers / hajatan / acara khusus</label>
         </fieldset>
+        <p id="topik-error" class="field-error" aria-live="polite"></p>
 
         <fieldset>
           <legend>Waktu yang Diinginkan untuk Dihubungi</legend>
@@ -77,13 +84,18 @@
 
         <div class="field">
           <label for="pesan">Catatan Pesanan / Alamat Pengiriman</label>
-          <textarea id="pesan" name="pesan" rows="5" required minlength="10" placeholder="Sebutkan varian yang diinginkan, jumlah box, alamat pengiriman, atau catatan khusus lainnya..."></textarea>
+          <textarea id="pesan" name="pesan" rows="5" required minlength="20" aria-describedby="pesan-error" placeholder="Sebutkan varian yang diinginkan, jumlah box, alamat pengiriman, atau catatan khusus lainnya..."></textarea>
+          <p id="pesan-error" class="field-error" aria-live="polite"></p>
         </div>
 
-                <div class="form-actions">
+        <div class="field">
+          <label><input id="setuju" name="setuju" type="checkbox" required aria-describedby="setuju-error" /> Saya setuju data dummy ini boleh dipreview</label>
+          <p id="setuju-error" class="field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-actions">
           <button type="submit">Kirim Pesanan &amp; Tampilkan Preview</button>
         </div>
-      </form>
       </form>
 
       <section aria-labelledby="preview-title" class="preview-section">
@@ -96,6 +108,5 @@
       <p>&copy; 2026 Bakpia.id Yogyakarta. Data dan layanan pada halaman ini disusun untuk kebutuhan praktikum.</p>
     </footer>
 
-    <script src="js/script.js"></script>
   </body>
 </html>

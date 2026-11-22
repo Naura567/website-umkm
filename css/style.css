@@ -758,3 +758,20 @@ button[type="submit"]:focus-visible {
   background: #ffffff;
   color: #64748b;
 }
+
+/* P12 langkah 3: state validasi */
+.field-error,
+.form-feedback {
+  margin: 0;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.field-error {
+  min-height: 1.4rem;
+}
+
+[aria-invalid="true"] {
+  border-color: #b91c1c;
+  box-shadow: 0 0 0 3px rgb(185 28 28 / 15%);
+}
